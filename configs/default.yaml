@@ -1,0 +1,28 @@
+seed: 42
+model:
+  hf_id: "tdc/scGPT"            # Change to your checkpoint if different
+  hidden_size: 512
+  freeze_backbone: true
+adapter:
+  bottleneck: 64
+  corr_threshold: 0.25
+  max_neighbors: 16
+train:
+  batch_size: 24
+  lr_head: 1.0e-3
+  lr_adapter: 1.0e-3
+  lr_cond: 1.0e-3
+  weight_decay: 1.0e-4
+  max_epochs: 8
+  val_every: 1
+  out_dir: "runs"
+  mask_ratio: 0.15              # fraction of gene tokens to compute loss on
+data:
+  source: "pbmc3k_synth"
+  hvg: 2000
+  min_cells: 3
+  max_tokens_per_cell: 1000
+  n_perturb: 5                  # number of synthetic perturbations (plus 'ctrl')
+  ctrl_label: "ctrl"
+  val_size: 0.15
+  test_size: 0.15

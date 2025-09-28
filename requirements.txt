@@ -1,0 +1,10 @@
+torch>=2.2
+transformers>=4.44
+scanpy>=1.9
+anndata>=0.10
+pandas>=2.1
+numpy>=1.26
+scipy>=1.11
+pyyaml>=6.0
+tqdm>=4.66
+scikit-learn>=1.3
