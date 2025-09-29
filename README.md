@@ -1,6 +1,8 @@
 # scGPT Perturbation Adapter (Frozen Backbone)
 
-Freeze a pretrained **scGPT** backbone and train **only new modules** to predict
+This project is an experimental extension of [scGPT](https://github.com/bowang-lab/scGPT)
+
+By freezing a pretrained **scGPT** backbone and train **only new modules** to predict
 **post-perturbation gene expression** from a control cell + a perturbation condition.
 
 - Backbone: scGPT (Hugging Face weights) — stays **frozen**.
